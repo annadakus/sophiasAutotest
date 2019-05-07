@@ -32,8 +32,8 @@ public class LoggedInCheckoutTest extends HomepagePage {
         }
         chooseShippingMethod();
         choosePaymentMethod();
-        placeOrderByGuest();
-        checkOrderConfirmationPage();
+        //placeOrderByGuest();
+        //checkOrderConfirmationPage();
 
 
     }
