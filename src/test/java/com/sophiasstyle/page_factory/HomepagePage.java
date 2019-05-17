@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class HomepagePage extends BaseTest {
 
-    private final String ADD_TO_CARD = "#product-addtocart-button";
+    private final String ADD_TO_CART = "#product-addtocart-button";
     private SelenideElement popup = $(".add-confirm-btn");
 
     protected void openCategoryGirlsAccessories() {
@@ -31,8 +31,8 @@ public class HomepagePage extends BaseTest {
 
     @Step
     protected void addToCart() {
-        $(ADD_TO_CARD).shouldBe(Condition.visible);
-        $(ADD_TO_CARD).click();
+        $(ADD_TO_CART).shouldBe(Condition.visible);
+        $(ADD_TO_CART).click();
     }
 
     @Step
