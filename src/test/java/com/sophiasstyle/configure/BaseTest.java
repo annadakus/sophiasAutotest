@@ -18,16 +18,28 @@ import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 public class BaseTest {
 
+//Selenoid for MAC
 
- @BeforeClass  //settings for launch tests using selenoid (docker) on Windows
+ @BeforeClass
     static public void setupSelenoid() {
-       Configuration.remote = "http://192.168.99.100:4444/wd/hub";
+       Configuration.remote = "http://localhost:4444/wd/hub";
       Configuration.browser = "chrome";
         Configuration.browserSize = "1280x1024";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         Configuration.browserCapabilities = capabilities;
     }
+// Selenoid for Windows
+
+//    @BeforeClass  //settings for launch tests using selenoid (docker) on Windows
+//    static public void setupSelenoid() {
+//        Configuration.remote = "http://192.168.99.100:4444/wd/hub";
+//        Configuration.browser = "chrome";
+//        Configuration.browserSize = "1280x1024";
+//        DesiredCapabilities capabilities = new DesiredCapabilities();
+//        capabilities.setCapability("enableVNC", true);
+//        Configuration.browserCapabilities = capabilities;
+//    }
 
     @Before
     public void setUp() {
