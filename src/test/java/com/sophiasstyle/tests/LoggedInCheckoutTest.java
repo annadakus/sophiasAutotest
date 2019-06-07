@@ -14,13 +14,13 @@ public class LoggedInCheckoutTest extends HomepagePage {
     @Test
     public void loggedInUserCheckout() throws InterruptedException {
         openHomePage();
-        openCategoryGirlsAccessories();
+        goToCategoryGirlsAccessories();
         login("test7.user7@gmail.com", "1111abcd1111Q");
-        openCategoryGirlsAccessories();
+        goToCategoryGirlsAccessories();
         selectItem(1);
 
         addToCart();
-        openShoppingCart();
+        goToShoppingCart();
         goToCheckoutPage();
         SelenideElement address = $("#billing-address-select");
         Thread.sleep(5000);

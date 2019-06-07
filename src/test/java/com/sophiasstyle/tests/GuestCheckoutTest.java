@@ -11,10 +11,10 @@ public class GuestCheckoutTest extends HomepagePage {
     @Test
     public void guestCheckoutTest() throws InterruptedException {
         openHomePage();
-        openCategoryGirlsAccessories();
+        goToCategoryGirlsAccessories();
         selectItem(1);
         addToCart();
-        openShoppingCart();
+        goToShoppingCart();
         checkCartPage();
         checkItemsTotal("1");
         goToCheckoutPage();
